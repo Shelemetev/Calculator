@@ -92,48 +92,49 @@ document.querySelector(".form").addEventListener("submit", (event) => {
 
     if (values.year === "1") {
         if (count < 325000) {
-            let end = count * 0.54 * 95.7849
+            let end = count * 0.54
             if (end < values.volume * 2.5 * 95.7849) {
                 fee.innerHTML = values.volume * 2.5 * 95.7849
             } else {
                 fee.innerHTML = end
             }
         } else if (count >= 325000 && count < 650000) {
-            let end = count * 0.48 * 95.7849
+            let end = count * 0.48
             if (end < values.volume * 3.5 * 95.7849) {
                 fee.innerHTML = values.volume * 3.5 * 95.7849
             } else {
                 fee.innerHTML = end
             }
         } else if (count >= 650000 && count < 1650000) {
-            let end = count * 0.48 * 95.7849
+            let end = count * 0.48
             if (end < values.volume * 5.5 * 95.7849) {
-                fee.innerHTML = values.volume * 7.5 * 95.7849
+                fee.innerHTML = values.volume * 5.5 * 95.7849
             } else {
                 fee.innerHTML = end
             }
         } else if (count >= 1650000 && count < 3250000) {
-            let end = count * 0.48 * 95.7849
+            let end = count * 0.48
             if (end < values.volume * 7.5 * 95.7849) {
                 fee.innerHTML = values.volume * 7.5 * 95.7849
             } else {
                 fee.innerHTML = end
             }
         } else if (count >= 3250000 && count < 6500000) {
-            let end = count * 0.48 * 95.7849
+            let end = count * 0.48
             if (end < values.volume * 15 * 95.7849) {
                 fee.innerHTML = values.volume * 15 * 95.7849
             } else {
                 fee.innerHTML = end
             }
         } else if (count >= 6500000) {
-            let end = count * 0.48 * 95.7849
+            let end = count * 0.48
             if (end < values.volume * 20 * 95.7849) {
                 fee.innerHTML = values.volume * 20 * 95.7849
             } else {
                 fee.innerHTML = end
             }
         }         
+            
     } else if (values.year === "2") {
         if (values.volume < 1000) {
             fee.innerHTML = values.volume * 1.5 * 95.7849
