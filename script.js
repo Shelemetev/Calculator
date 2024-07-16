@@ -3,13 +3,6 @@ const currency = document.querySelector(".currency")
 const numberInput = document.querySelectorAll('.form-control')
 const form = document.querySelector(".form")
 
-numberInput.forEach(element => {
-    element.addEventListener('change', () => {
-        if (element.value < 1) {
-            element.value = 1
-        }
-    })
-})
 
 inputExport.addEventListener("change", () => {
     if (inputExport.value === "1" || inputExport.value === "2") {
