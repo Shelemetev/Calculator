@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container px-4 text-center">
+        <form action="">
+            <div class="row row-cols-2 row-cols-lg-3">
+                <div class="col">
+                    <h1 class="input__title">Страна-экспортер</h1>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">Япония</option>
+                        <option value="2">Корея</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h1 class="input__title">Стоимость авто</h1>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">¥</span>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col">
+                    <h1 class="input__title">Год выпуска</h1>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">меньше 3-х лет</option>
+                        <option value="2">3-5 лет</option>
+                        <option value="3">больше 5 лет</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h1 class="input__title">Объем двигателя, см3</h1>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="col">
+                    <h1 class="input__title">Мощность двигателя</h1>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="col">
+                    <h1 class="input__title">Тип двигателя</h1>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">Бензиновый</option>
+                        <option value="2">Электрический</option>
+                        <option value="3">Дизельный</option>
+                        <option value="4">Дизельный и электрический</option>
+                        <option value="5">Бензиновый и электрический</option>
+                    </select>
+                </div>
+                <div class="col col-12 col-lg-4">
+                    <button class="btn btn-danger btn-lg" type="submit">Рассчитать стоимость</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
