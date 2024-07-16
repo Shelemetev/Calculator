@@ -19,7 +19,8 @@
                     <h1 class="input__title">Страна-экспортер</h1>
                     <select class="form-select" id="export" name="export" aria-label="Default select example" >
                         <option value="1">Япония</option>
-                        <option value="2">Корея</option>
+                        <option value="2">Китай</option>
+                        <option value="3">Корея</option>
                     </select>
                 </div>
                 <div class="col">
@@ -58,11 +59,72 @@
                         <option value="5">Бензиновый и электрический</option>
                     </select>
                 </div>
-                <div class="col col-12 col-lg-4">
+                <div class="col col-4 col-lg-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            физ.лицо
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            юр.лицо
+                        </label>
+                    </div>
+                </div>
+                <div class="col col-12 col-lg-12">
                     <button class="btn btn-danger btn-lg" type="submit">Рассчитать стоимость</button>
                 </div>
             </div>
         </form>
+    </div>
+    <div class="container p-0 text-center ">
+        <div class="row row-cols-2 row-cols-lg-2">
+            <div class="col col-12 col-lg-12 result-item">
+                <h2>ИТОГО: ~ 186 758 ₽</h1>
+            </div>
+            <div class="col col-12 col-lg-12 result-item">
+                <div class="row row-cols-2 row-cols-lg-2">
+                    <div class="col">
+                        <p class="text-start">Цена авто на аукционе в рублях</p>
+                    </div>
+                    <div class="col">
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-12 result-item">
+                <div class="row row-cols-2 row-cols-lg-2">
+                    <div class="col">
+                        <p class="text-start">Утилизационный сбор</p>
+                    </div>
+                    <div class="col">
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-12 result-item">
+                <div class="row row-cols-2 row-cols-lg-2">
+                    <div class="col">
+                        <p class="text-start">Пошлина</p>
+                    </div>
+                    <div class="col">
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-12 result-item">
+                <div class="row row-cols-2 row-cols-lg-2">
+                    <div class="col">
+                        <p class="text-start">Итог</p>
+                    </div>
+                    <div class="col">
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
