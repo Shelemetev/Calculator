@@ -35,7 +35,7 @@ document.querySelector(".form").addEventListener("submit", (event) => {
     let count = 0
 
     if (values.export === "1") {
-        let resultCurrency = parseInt(values.currency) * 0.55
+        let resultCurrency = parseInt(values.currency) * 0.555
         currencyBlock.innerHTML = Math.round(resultCurrency)
         count = Math.round(resultCurrency)
         
