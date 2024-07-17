@@ -35,7 +35,7 @@ document.querySelector(".form").addEventListener("submit", (event) => {
     let count = 0
 
     if (values.export === "1") {
-        let resultCurrency = parseInt(values.currency) * 0.555
+        let resultCurrency = parseInt(values.currency) * 0.55
         currencyBlock.innerHTML = Math.round(resultCurrency)
         count = Math.round(resultCurrency)
         
@@ -83,82 +83,259 @@ document.querySelector(".form").addEventListener("submit", (event) => {
         }
     }
 
-    if (values.year === "1") {
-        if (count < 325000) {
-            let end = count * 0.54
-            if (end < values.volume * 2.5 * 95.7849) {
-                fee.innerHTML = values.volume * 2.5 * 95.7849
-            } else {
-                fee.innerHTML = end
-            }
-        } else if (count >= 325000 && count < 650000) {
-            let end = count * 0.48
-            if (end < values.volume * 3.5 * 95.7849) {
-                fee.innerHTML = values.volume * 3.5 * 95.7849
-            } else {
-                fee.innerHTML = end
-            }
-        } else if (count >= 650000 && count < 1650000) {
-            let end = count * 0.48
-            if (end < values.volume * 5.5 * 95.7849) {
-                fee.innerHTML = values.volume * 5.5 * 95.7849
-            } else {
-                fee.innerHTML = end
-            }
-        } else if (count >= 1650000 && count < 3250000) {
-            let end = count * 0.48
-            if (end < values.volume * 7.5 * 95.7849) {
-                fee.innerHTML = values.volume * 7.5 * 95.7849
-            } else {
-                fee.innerHTML = end
-            }
-        } else if (count >= 3250000 && count < 6500000) {
-            let end = count * 0.48
-            if (end < values.volume * 15 * 95.7849) {
-                fee.innerHTML = values.volume * 15 * 95.7849
-            } else {
-                fee.innerHTML = end
-            }
-        } else if (count >= 6500000) {
-            let end = count * 0.48
-            if (end < values.volume * 20 * 95.7849) {
-                fee.innerHTML = values.volume * 20 * 95.7849
-            } else {
-                fee.innerHTML = end
-            }
-        }         
-            
-    } else if (values.year === "2") {
-        if (values.volume < 1000) {
-            fee.innerHTML = values.volume * 1.5 * 95.7849
-        } else if (values.volume >= 1000 && values.volume < 1500) {
-            fee.innerHTML = values.volume * 1.7 * 95.7849
-        } else if (values.volume >= 1500 && values.volume < 1800) {
-            fee.innerHTML = values.volume * 2.5 * 95.7849
-        } else if (values.volume >= 1800 && values.volume < 2300) {
-            fee.innerHTML = values.volume * 2.7 * 95
-        }else if (values.volume >= 2300 && values.volume < 3000) {
-            fee.innerHTML = values.volume * 3 * 95.7849
-        } else if (values.volume >= 3000) {
-            fee.innerHTML = values.volume * 3.6 * 95.7849
-        }        
-    } else if (values.year === "3") {
-        if (values.volume < 1000) {
-            fee.innerHTML = values.volume * 3 * 95.7849
-        } else if (values.volume >= 1000 && values.volume < 1500) {
-            fee.innerHTML = values.volume * 3.2 * 95.7849
-        } else if (values.volume >= 1500 && values.volume < 1800) {
-            fee.innerHTML = values.volume * 3.5 * 95.7849
-        } else if (values.volume >= 1800 && values.volume < 2300) {
-            fee.innerHTML = values.volume * 4.8 * 95.7849
-        } else if (values.volume >= 2300 && values.volume < 3000) {
-            fee.innerHTML = values.volume * 5 * 95.7849
-        } else if (values.volume >= 3000) {
-            fee.innerHTML = values.volume * 5.7 * 95.7849
-        }        
-    } 
+    
+
+    if (values.flexRadioDefault === false) {
+        if (values.type === '2') {
+            fee.innerHTML = count * 0.15
+        } else {
+            if (values.year === "1") {
+                if (count < 818210) {
+                    let end = count * 0.54
+                    if (end < values.volume * 2.5 * 95.7849) {
+                        fee.innerHTML = values.volume * 2.5 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (count >= 818210 && count < 1607542) {
+                    let end = count * 0.48
+                    if (end < values.volume * 3.5 * 95.7849) {
+                        fee.innerHTML = values.volume * 3.5 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (count >= 1607542 && count < 4071798) {
+                    let end = count * 0.48
+                    if (end < values.volume * 5.5 * 95.7849) {
+                        fee.innerHTML = values.volume * 5.5 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (count >= 4071798 && count < 8133970) {
+                    let end = count * 0.48
+                    if (end < values.volume * 7.5 * 95.7849) {
+                        fee.innerHTML = values.volume * 7.5 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (count >= 8133970 && count < 16267940) {
+                    let end = count * 0.48
+                    if (end < values.volume * 15 * 95.7849) {
+                        fee.innerHTML = values.volume * 15 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (count >= 16267940) {
+                    let end = count * 0.48
+                    if (end < values.volume * 20 * 95.7849) {
+                        fee.innerHTML = values.volume * 20 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }         
+            } else if (values.year === "2") {
+                if (values.volume < 1000) {
+                    fee.innerHTML = values.volume * 1.5 * 95.7849
+                } else if (values.volume >= 1000 && values.volume < 1500) {
+                    fee.innerHTML = values.volume * 1.7 * 95.7849
+                } else if (values.volume >= 1500 && values.volume < 1800) {
+                    fee.innerHTML = values.volume * 2.5 * 95.7849
+                } else if (values.volume >= 1800 && values.volume < 2300) {
+                    fee.innerHTML = values.volume * 2.7 * 95
+                }else if (values.volume >= 2300 && values.volume < 3000) {
+                    fee.innerHTML = values.volume * 3 * 95.7849
+                } else if (values.volume >= 3000) {
+                    fee.innerHTML = values.volume * 3.6 * 95.7849
+                }        
+            } else if (values.year === "3") {
+                if (values.volume < 1000) {
+                    fee.innerHTML = values.volume * 3 * 95.7849
+                } else if (values.volume >= 1000 && values.volume < 1500) {
+                    fee.innerHTML = values.volume * 3.2 * 95.7849
+                } else if (values.volume >= 1500 && values.volume < 1800) {
+                    fee.innerHTML = values.volume * 3.5 * 95.7849
+                } else if (values.volume >= 1800 && values.volume < 2300) {
+                    fee.innerHTML = values.volume * 4.8 * 95.7849
+                } else if (values.volume >= 2300 && values.volume < 3000) {
+                    fee.innerHTML = values.volume * 5 * 95.7849
+                } else if (values.volume >= 3000) {
+                    fee.innerHTML = values.volume * 5.7 * 95.7849
+                }        
+            } 
+        }
+        
+    } else {
+        if (values.type === '1' || values.type === '5') {
+            if (values.year === "1") {
+                if (values.volume < 2801) {
+                    fee.innerHTML = count * 0.15
+                } else {
+                    fee.innerHTML = count * 0.125
+                }
+            } else if (values.year === "2") {
+                if (values.volume < 1000) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.36 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.36 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1000 && values.volume < 1500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.4 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.4 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1500 && values.volume < 1800) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.36 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.36 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1800 && values.volume < 2300) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.44 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.44 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }else if (values.volume >= 2300 && values.volume < 2800) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.44 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.44 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 2800 && values.volume < 3000) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.44 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.44 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }else if (values.volume >= 3000) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.8 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.8 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }   
+            } else if (values.year === "3") {
+                if (values.volume < 1000) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.36 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.36 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1000 && values.volume < 1500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.4 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.4 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1500 && values.volume < 1800) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.36 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.36 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1800 && values.volume < 2300) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.44 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.44 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }else if (values.volume >= 2300 && values.volume < 2800) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.44 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.44 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 2800 && values.volume < 3000) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.44 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.44 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }else if (values.volume >= 3000) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.8 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.8 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }   
+            }      
+        } else if (values.type === '3' || values.type === '4') {
+            if (values.year === "1") {
+                if (values.volume < 1500) {
+                    fee.innerHTML = count * 0.15
+                } else if (values.volume >= 1500 && values.volume < 2500) {
+                    fee.innerHTML = count * 0.15
+                } else if (values.volume >= 2500) {
+                    fee.innerHTML = count * 0.15
+                }
+            } else if (values.year === "2") {
+                if (values.volume < 1500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.32 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.32 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1500 && values.volume < 2500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.4 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.4 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 2500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.8 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.8 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+            } else if (values.year === "3") {
+                if (values.volume < 1500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.32 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.32 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 1500 && values.volume < 2500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.4 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.4 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                } else if (values.volume >= 2500) {
+                    let end = count * 0.2
+                    if (end < values.volume * 0.8 * 95.7849) {
+                        fee.innerHTML = values.volume * 0.8 * 95.7849
+                    } else {
+                        fee.innerHTML = end
+                    }
+                }
+            }     
+        }
+        } else if (values.type === '2') {
+            fee.innerHTML = count * 0.15
+        }  
 
     result.innerHTML = `ИТОГО: ${parseInt(fee.textContent) + parseInt(currencyBlock.textContent) + parseInt(recyclingCollectionBlock.textContent)}`
     console.log(fee.value);
-})
+}})
 
