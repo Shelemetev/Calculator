@@ -1,15 +1,244 @@
+const valueItem = document.querySelectorAll('.valute__select-item')
 const inputExport = document.getElementById("export")
 const currency = document.querySelector(".currency")
 const numberInput = document.querySelectorAll('.form-control')
 const form = document.querySelector(".form")
+const selectorBackgroundYears = document.querySelector('.years__background')
+const selectorBackgroundTypes = document.querySelector('.type__background')
+const selectorItemsYears = document.querySelectorAll('.years__select-item')
+const selectorItemsTypes = document.querySelectorAll('.type__select-item')
+
+document.querySelectorAll('.years__radio').forEach(item => {
+    item.addEventListener('click', (event) => {
+        if (item.value === '1') {
+            selectorBackgroundYears.classList.remove("item--hidden")
+            selectorBackgroundYears.classList.add("background-left")
+            selectorBackgroundYears.classList.remove("background-center")
+            selectorBackgroundYears.classList.remove("background-right")
+            
+        } else if (item.value === '2') {
+            selectorBackgroundYears.classList.remove("item--hidden")
+            selectorBackgroundYears.classList.remove("background-left")
+            selectorBackgroundYears.classList.add("background-center")
+            selectorBackgroundYears.classList.remove("background-right")
+            
+        } else if (item.value === '3') {
+            selectorBackgroundYears.classList.remove("item--hidden")
+            selectorBackgroundYears.classList.remove("background-left")
+            selectorBackgroundYears.classList.remove("background-center")
+            selectorBackgroundYears.classList.add("background-right")
+        }
+    })
+})
+
+document.querySelectorAll('.type__radio').forEach(item => {
+    item.addEventListener('click', (event) => {
+        if (item.value === '1') {
+            selectorBackgroundTypes.classList.remove("item--hidden")
+            selectorBackgroundTypes.classList.add("background-left")
+            selectorBackgroundTypes.classList.remove("background-right")
+            document.querySelector('.row__volume').classList.remove('item--hidden')
+            document.querySelector('.row__power').classList.add('item--hidden')
+        } else if (item.value === '2') {
+            selectorBackgroundTypes.classList.remove("item--hidden")
+            selectorBackgroundTypes.classList.remove("background-left")
+            selectorBackgroundTypes.classList.add("background-right")
+            document.querySelector('.row__volume').classList.add('item--hidden')
+            document.querySelector('.row__power').classList.remove('item--hidden')
+        }
+    })
+})
+
+selectorItemsYears.forEach(items => {
+    items.addEventListener('click', () => {
+        selectorItemsYears.forEach(items => {
+            items.classList.add("hover--grey")
+        })
+        items.classList.remove("hover--grey")
+    })
+})
+
+selectorItemsTypes.forEach(items => {
+    items.addEventListener('click', () => {
+        selectorItemsTypes.forEach(items => {
+            items.classList.add("hover--grey")
+        })
+        items.classList.remove("hover--grey")
+    })
+})
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
 
 
-inputExport.addEventListener("change", () => {
-    if (inputExport.value === "1" || inputExport.value === "2") {
-        currency.innerHTML = "¥"
-    } else {
-        currency.innerHTML = "₩"
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
+
+document.querySelectorAll('.years__radio').forEach(item => {
+    item.addEventListener('change', () => {
+        document.querySelector('.type__select').classList.remove('item--disable')
+    })
+})
+
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
+
+
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
+
+const currencyInput = document.querySelector('.currency__input')
+
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+currencyInput.addEventListener('input', () => {
+    document.querySelector('.years__select').classList.remove('item--disable')
+    let count = 0
+    valueItem.forEach(item => {
+            if (item.value === "1") {
+                count = parseInt(currencyInput.value.replaceAll(" ", "")) * 0.55
+                document.querySelector('.currency-block').innerHTML = numberWithSpaces(Math.round(count)) 
+            } else if (item.value === "2") {
+                count = parseInt(currencyInput.value.replaceAll(" ", "")) * 12.0537
+            } else if (item.value === "3") {
+                count = parseInt(currencyInput.value.replaceAll(" ", "")) * 0.0635
+            }
+    })
+    document.querySelector('.currency-block').innerHTML = numberWithSpaces(Math.round(count)) 
+    document.querySelector('.col__currency-block').classList.remove('item--hidden')
+    if (currencyInput.value == '') {
+        document.querySelector('.col__currency-block').classList.add('item--hidden')
     }
+})
+
+valueItem.forEach(item => {
+    item.addEventListener("change", () => {
+        if (item.value === "1" || item.value === "2") {
+            currencyInput.placeholder = '¥'
+        } else if (item.value === "3") {
+            currencyInput.placeholder = "₩"
+        }
+    })
+})
+
+valueItem.forEach(item => {
+    item.addEventListener("change", () => {
+        let count = 0
+        if (item.value === "1") {
+            count = parseInt(currencyInput.value.replaceAll(" ", "")) * 0.55
+            document.querySelector('.currency-block').innerHTML = numberWithSpaces(Math.round(count)) 
+        } else if (item.value === "2") {
+            count = parseInt(currencyInput.value.replaceAll(" ", "")) * 12.0537
+        } else if (item.value === "3") {
+            count = parseInt(currencyInput.value.replaceAll(" ", "")) * 0.0635
+        }
+        document.querySelector('.currency-block').innerHTML = numberWithSpaces(Math.round(count)) 
+
+    })
+})
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
+
+
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
+
+
+const valueBtn = document.querySelector('.valute__select-btn')
+const valueItems = document.querySelector('.valute__select-items')
+
+
+valueBtn.addEventListener("click", () => {
+    valueBtn.classList.toggle('valute__select-btn--active')
+    valueItems.classList.toggle('item--hidden')
+    valueItem.forEach(item => {
+        item.addEventListener("change", () => {
+            if (item.value === "1") {
+                valueBtn.innerHTML = 'Иены'
+            } else if (item.value === "2") {
+                valueBtn.innerHTML = 'Юани'
+            } else if (item.value === "3") {
+                valueBtn.innerHTML = 'Воны'
+            }
+        })
+    })
+})
+
+document.querySelectorAll('.valute__select-text').forEach(item => {
+    item.addEventListener('click', () => {
+        valueBtn.classList.toggle('valute__select-btn--active')
+        valueItems.classList.toggle('item--hidden') 
+    })
+})
+
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
+
+
+
+// // 
+// 
+// // 
+// 
+// 
+// // 
+// 
+// 
+
+document.querySelectorAll("input").forEach(item => {
+    item.addEventListener("input", () => {
+        console.log(item);
+    })
 })
 
 const radio = type => ['radio'].includes(type);
@@ -82,8 +311,6 @@ document.querySelector(".form").addEventListener("submit", (event) => {
             } 
         }
     }
-
-    
 
     if (values.flexRadioDefault === false) {
         if (values.type === '2') {
@@ -164,7 +391,7 @@ document.querySelector(".form").addEventListener("submit", (event) => {
             } 
         }
         
-    } else {
+    } else if (values.flexRadioDefault === true) {
         if (values.type === '1' || values.type === '5') {
             if (values.year === "1") {
                 if (values.volume < 2801) {
@@ -338,4 +565,6 @@ document.querySelector(".form").addEventListener("submit", (event) => {
     result.innerHTML = `ИТОГО: ${parseInt(fee.textContent) + parseInt(currencyBlock.textContent) + parseInt(recyclingCollectionBlock.textContent)}`
     console.log(fee.value);
 }})
+
+
 
