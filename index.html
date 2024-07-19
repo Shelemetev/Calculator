@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./iconmoon/style.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="media.css">
     <title>Document</title>
 </head>
 
@@ -19,15 +23,23 @@
 
     <div class="container px-4 text-center">
         <form action="" class="form">
+            <div class="row--margin row--adaptive">
+                <div class="col">
+                    <p class="input__title">Цена авто</p>
+                </div>
+            </div>
             <div class="row--margin">
                 <div class="row row__form">
                     <div class="col col--left">
+                    
                         <div class="row">
                             <div class="col col--text">
-                                <p class="input__title">Цена авто</p>
+                                <p class="input__title ">Цена авто</p>
                             </div>
                             <div class="col col__currency">
-                                <input maxlength="13" type="text" placeholder="¥" class="form-control currency__input" name="currency">
+                                <input maxlength="13" type="text" placeholder="¥" class="form-control currency__input"
+                                    name="currency">
+                                <button class="currency__btn item--hidden"></button>
                             </div>
                             <div class="col col__valute">
                                 <!-- <select class="form-select select__valute" id="export" name="export" aria-label="Default select example" >
@@ -37,15 +49,18 @@
                                 </select> -->
                                 <button type="button" class="valute__select-btn">Иены</button>
                                 <div class="valute__select-items item--hidden">
-                                    <input class="radio-hidden valute__select-item" checked type="radio" value="1" name="export" id="Yen">
+                                    <input class="radio-hidden valute__select-item" checked type="radio" value="1"
+                                        name="export" id="Yen">
                                     <label class="valute__select-text" for="Yen">Иены</label>
-                                    <input class="radio-hidden valute__select-item" type="radio" value="2" name="export" id="Yuan">
+                                    <input class="radio-hidden valute__select-item" type="radio" value="2" name="export"
+                                        id="Yuan">
                                     <label class="valute__select-text" for="Yuan">Юани</label>
-                                    <input class="radio-hidden valute__select-item" type="radio" value="3" name="export" id="Von">
+                                    <input class="radio-hidden valute__select-item" type="radio" value="3" name="export"
+                                        id="Von">
                                     <label class="valute__select-text" for="Von">Воны</label>
                                 </div>
                             </div>
-                        </div>       
+                        </div>
                     </div>
                     <div class="col__currency-block item--hidden">
                         <p class="currency-block">0</p>
@@ -53,33 +68,50 @@
                     </div>
                 </div>
             </div>
+            <div class="row--margin row--adaptive">
+                <div class="col">
+                    <p class="input__title">Возраст авто</p>
+                </div>
+            </div>
             <div class="row--margin">
                 <div class="row row__form">
-                    <div class="col">
+                    <div class="col"style='position: relative;'>
                         <div class="row">
                             <div class="col col--text">
-                                <p class="input__title">Возраст авто</p>
+                                <p class="input__title ">Возраст авто</p>
                             </div>
                             <div class="col col__years ">
                                 <div class="row years__select item--disable">
+                                    <input class="radio-hidden" value="0" checked type="radio" name="year">
                                     <div class="col col-select">
-                                        <input class="radio-hidden years__radio" value="1" type="radio" name="year" id="3year">
-                                        <label class="custom__select-item years__select-item hover--grey" for="3year">Младше 3</label>
+                                        <input class="radio-hidden years__radio" value="1" type="radio" name="year"
+                                            id="3year">
+                                        <label class="custom__select-item years__select-item hover--grey"
+                                            for="3year">Младше 3</label>
                                     </div>
                                     <div class="col col-select item__select--center">
-                                        <input class="radio-hidden years__radio" value="2" type="radio" name="year" id="5year">
-                                        <label class="custom__select-item years__select-item hover--grey" for="5year">От 3 до 5 лет</label>
+                                        <input class="radio-hidden years__radio" value="2" type="radio" name="year"
+                                            id="5year">
+                                        <label class="custom__select-item years__select-item hover--grey" for="5year">От
+                                            3 до 5 лет</label>
                                     </div>
                                     <div class="col col-select">
-                                        <input class="radio-hidden years__radio" value="3" type="radio" name="year" id="7year">
-                                        <label class="custom__select-item years__select-item hover--grey" for="7year">Старше 5</label>
+                                        <input class="radio-hidden years__radio" value="3" type="radio" name="year"
+                                            id="7year">
+                                        <label class="custom__select-item years__select-item hover--grey"
+                                            for="7year">Старше 5</label>
                                     </div>
                                     <div class="years__background  item--hidden"></div>
                                 </div>
                             </div>
-                        </div>  
-                        <a class="years__link">Подробнее о годах выпуска</a>     
-                    </div>  
+                        </div>
+                        <a class="years__link">Подробнее о годах выпуска</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row--margin row--adaptive">
+                <div class="col">
+                    <p class="input__title">Тип двигателя</p>
                 </div>
             </div>
             <div class="row--margin">
@@ -87,68 +119,83 @@
                     <div class="col">
                         <div class="row">
                             <div class="col col--text">
-                                <p class="input__title">Тип двигателя</p>
+                                <p class="input__title ">Тип двигателя</p>
                             </div>
                             <div class="col col__type">
                                 <div class="row type__select item--disable">
+                                    <input class="radio-hidden" checked value="0" type="radio" name="type">
                                     <div class="col col-select">
-                                        <input class="radio-hidden type__radio" value="1" type="radio" name="type" id="gasoline">
-                                        <label class="custom__select-item type__select-item hover--grey" for="gasoline">Бензин или дизель</label>
+                                        <input class="radio-hidden type__radio" value="1" type="radio" name="type"
+                                            id="gasoline">
+                                        <label class="custom__select-item type__select-item hover--grey"
+                                            for="gasoline">Бензин или дизель</label>
                                     </div>
                                     <div class="col col-select">
-                                        <input class="radio-hidden type__radio" value="2" type="radio" name="type" id="electro">
-                                        <label class="custom__select-item type__select-item hover--grey" for="electro">Электро</label>
+                                        <input class="radio-hidden type__radio" value="2" type="radio" name="type"
+                                            id="electro">
+                                        <label class="custom__select-item type__select-item hover--grey"
+                                            for="electro">Электро</label>
                                     </div>
                                     <div class="type__background item--hidden"></div>
                                 </div>
                             </div>
-                        </div>       
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row--margin row__volume item--hidden">
-                <div class="row row__form">
-                    <div class="col">
+                <div class="row row__form row--adaptive">
+                    <div class="col" style="height: auto;">
+                        <div class="row row--title">
+                            <p class="input__title ">Обьем двигателя</p>
+                        </div>
                         <div class="row">
                             <div class="col col--text">
                                 <p class="input__title">Обьем двигателя</p>
                             </div>
                             <div class="col col__volume">
-                                <input type="text" placeholder="см³" class="form-control volume__input" name="volume" aria-label="Sizing example input"
-                                    aria-describedby="inputGroup-sizing-default" required >
+                                <input type="text" placeholder="см³" class="form-control volume__input volume--input" name="volume"
+                                    aria-label="Sizing example input" maxlength="5" aria-describedby="inputGroup-sizing-default">
+                                <button class='volume__btn item--hidden'></button>
                             </div>
-                        </div>       
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row--margin row__power item--hidden">
                 <div class="row row__form">
                     <div class="col">
+                        <div class="row row--title">
+                            <p class="input__title ">Мощьность</p>
+                        </div>
                         <div class="row">
                             <div class="col col--text">
                                 <p class="input__title">Мощьность</p>
                             </div>
                             <div class="col col__volume">
-                                <input type="text" placeholder="л.с." class="form-control volume__input" name="power" aria-label="Sizing example input"
-                                    aria-describedby="inputGroup-sizing-default" required >
+                                <input type="text" placeholder="л.с." class="form-control volume__input power--input" name="power"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                                    >
+                                <button class="power__btn  item--hidden"></button>
                             </div>
-                        </div>       
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
 
-    <div class="container px-4 text-center ">
+    <div class="container px-4 text-center result item--hidden">
         <div class="row row__result row--margin">
             <div class="col col--text">
                 <p class="result__title">Результат</p>
             </div>
             <div class="col col__result">
                 <div class="result__block">
-                    <h1 class="result__block-title">Цена авто с пошлиной без учета доставки</h1>
+                    <h1 class="result__block-title result__block-title--adaptive-lg">Цена авто с пошлиной без учета доставки</h1>
+                    <h1 class="result__block-title result__block-title--adaptive">Цена авто с пошлиной</h1>
                     <h1 class="result__block-suptext">Курсы валют ЦБ РФ на 18.07.2024</h1>
-                    <div class="row row__result">
+                    <div class="row row__result result__row-adaptive">
                         <div class="col col__result col__yen">
                             <input type="text" class="input__valute input--yen" value="55.57 ₽" disabled>
                         </div>
@@ -158,9 +205,96 @@
                         <div class="col col__result col__von">
                             <input class="input__valute input--von" value="63.555 ₽" disabled type="text">
                         </div>
-                        
                     </div>
-                    <div class="result__block-text">~5 000 ₽</div>
+                    <div class="adaptive--link"></div>
+                    <div class="result__block-text ">
+                        <p>~</p>
+                        <div class="result__count">5 000</div>
+                        <p> ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row__result row--margin">
+            <div class="col col--text">
+                <p class="result__title">Детали расчета</p>
+            </div>
+            <div class="col col__result">
+                <div class="result__block result__block--fee">
+                    <div class="row row__result--fee">
+                        <div class="col col--title result__col--addaptive">
+                            <h1 class="result__block-title result__block-title--adaptive-lg">Цена авто</h1>
+                            <h1 class="result__block-title result__block-title--adaptive">Цена авто</h1>
+                        </div>
+                        <div class="col">
+                            <div class="row text-end justify-content-md-center">
+                                <div class="col col__text-end">
+                                    <div class="result__valute-block">
+                                        <p class="result__valute-text auto__count-valute">2</p>
+                                        <p class="result__valute-char auto__count-valute--char"></p>
+                                    </div>
+                                </div>
+                                <div class="col col__text-end">
+                                    <div class="result__count-block">
+                                        <p class="result__count-text auto__count-rub">2 234 000</p>
+                                        <p class="result__count-char">₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row__result">
+                        <div class="col col--title" style="max-width: 100%; width: auto;"> 
+                            <h1 class="result__block-title result__block-title--adaptive-lg">Пошлина и сборы на физлиц</h1>
+                            <h1 class="result__block-title result__block-title--adaptive">Пошлина и сборы</h1>
+                        </div>
+                        <div class="col">
+                            <div class="row text-end justify-content-md-center">
+                                <div class="col col__text-end">
+                                    <div class="result__count-block">
+                                        <p class="result__count-text intermediate--result">0</p>
+                                        <p class="result__count-char">₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row__result">
+                        <div class="col col--title">
+                            <h1 class="result__block-title result__block-title--smal">Пошлина</h1>
+                        </div>
+                        <div class="col col--count">
+                            <div class="row text-end justify-content-md-center">
+                                <div class="col col--euro col__text-end">
+                                    <div class="result__valute-block">
+                                        <p class="result__valute-text auto__count-euro">0</p>
+                                        <p class="result__valute-char">€</p>
+                                    </div>
+                                </div>
+                                <div class="col col__text-end">
+                                    <div class="result__count-block result__count-block--small">
+                                        <p class="result__count-text fee">0</p>
+                                        <p class="result__count-char">₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row__result">
+                        <div class="col">
+                            <h1 class="result__block-title result__block-title--smal">Утилизационный сбор</h1>
+                        </div>
+                        <div class="col col--right" >
+                            <div class="row text-end  justify-content-md-center" >
+                                <div class="col col__text-end ">
+                                    <div class="result__count-block result__count-block--small">
+                                        <p class="result__count-text recycling__сollection-block">0</p>
+                                        <p class="result__count-char">₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,6 +311,7 @@
             delimiter: " ",
             numeral: true,
         })
+        
         
     </script>
     <script src="./script.js"></script>
