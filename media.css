@@ -232,5 +232,9 @@
     .result__valute-block {
         position: absolute;
     }
+
+    .row--adaptive {
+        display: block;
+    }
 }
 
