@@ -14,8 +14,27 @@
     }
 
    .result__col--adaptive {
-     max-width: 100px;
-     width: 100px;
+        max-width: 140px;
+        width: 140px;
+   }
+
+   .result__block-title {
+    width: 100px;
+   }
+
+   .result__valute-block {
+        right: 0px;
+        top: 100%;
+   }
+
+   .row__result--fee , .row__result {
+        position: relative;
+        width: auto;
+   }
+
+
+   .result__valute-block-sm {
+        top: 70%;
    }
 }
 
